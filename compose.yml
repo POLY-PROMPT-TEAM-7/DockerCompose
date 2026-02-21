@@ -5,8 +5,8 @@ services:
     image: ghcr.io/poly-prompt-team-7/backend-placeholder:latest
     ports:
       - "8000:8000"
-    tmpfs:
-      - /tmp
+    volumes:
+      - backend-data:/tmp
     env_file:
       - .env
 
