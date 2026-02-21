@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   backend:
-    image: ghcr.io/yourorg/backend-placeholder:latest
+    image: ghcr.io/poly-prompt-team-7/backend-placeholder:latest
     ports:
       - "8000:8000"
     tmpfs:

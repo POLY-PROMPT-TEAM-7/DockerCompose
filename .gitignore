@@ -1,0 +1,15 @@
+*CLAUDE.md
+*SCOPE.md
+*.ruff_cache/
+*.claude/
+*.sisyphus/
+*.opencode/
+*.logs/
+*.vscode/
+*.egg-info
+*__pycache__/
+*plans/
+*.duckdb
+*.env
+*result/
+*result
