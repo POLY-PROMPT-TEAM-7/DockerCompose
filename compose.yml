@@ -7,6 +7,8 @@ services:
       - "8000:8000"
     tmpfs:
       - /tmp
+    env_file:
+      - .env
 
   frontend:
     image: ghcr.io/yourorg/frontend-placeholder:latest
