@@ -11,7 +11,7 @@ services:
       - .env
 
   frontend:
-    image: ghcr.io/yourorg/frontend-placeholder:latest
+    image: ghcr.io/poly-prompt-team-7/kg-frontend:latest
     ports:
       - "3000:3000"
     depends_on:
