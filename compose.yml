@@ -1,20 +1,17 @@
-version: "3.8"
-
 services:
   backend:
     image: ghcr.io/poly-prompt-team-7/backend-placeholder:latest
     ports:
       - "8000:8000"
-    volumes:
-      - backend-data:/tmp
-    env_file:
-      - .env
-
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENALEX_API_KEY=${OPENALEX_API_KEY}
+      - CANVAS_API_KEY=${CANVAS_API_KEY}
   frontend:
-    image: ghcr.io/poly-prompt-team-7/kg-frontend:latest
+    build:
+      context: ../frontendv2
+      dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    depends_on:
-      - backend
     environment:
-      API_URL: "http://backend:8000"
+      - API_URL=http://backend:8000
