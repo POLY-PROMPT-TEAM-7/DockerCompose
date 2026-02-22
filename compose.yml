@@ -9,7 +9,7 @@ services:
       - CANVAS_API_KEY=${CANVAS_API_KEY}
   frontend:
     build:
-      context: ../frontendv2
+      context: ../Frontend2
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
